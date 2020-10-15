@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { findAllInRenderedTree } from "react-dom/test-utils";
 import "./App.css";
 import firebase from "./components/firebase";
 import User from "./components/user";
@@ -52,6 +51,7 @@ class App extends Component {
                 if (item.account === app.account) {
                   return true;
                 }
+                return false;
               })}
             />
           ))}

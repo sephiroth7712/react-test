@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import firebase from "./firebase";
 class UserApps extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +10,6 @@ class UserApps extends Component {
     };
   }
   render() {
-    console.log(this.props);
     return (
       <div className="apps">
         <h3>{this.state.title}</h3>
