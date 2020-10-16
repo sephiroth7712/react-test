@@ -9,6 +9,7 @@ class App extends Component {
     this.state = {
       users: [],
       apps: [],
+      ratings: [],
       active: "accounts",
       open: true,
     };
@@ -68,6 +69,7 @@ class App extends Component {
   componentDidMount() {
     const usersRef = firebase.database().ref("users");
     const appRef = firebase.database().ref("accounts");
+
     usersRef.on("value", (snapshot) => {
       let users = snapshot.val();
       let newState = [];
